@@ -1,0 +1,53 @@
+.playground {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    overflow: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.field {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    float: left;
+}
+
+.selected-field-human {
+    background-color: blue;
+}
+
+.selected-field-machine {
+    background-color: brown;
+}
+
+.human-won {
+    background-color:black;
+}
+
+.machine-won {
+    background-color: chartreuse;
+}
+
+.row:last-child {
+    clear: both;
+}
+
+.next-field {
+    background-color: aquamarine;
+}
+
+#controlForm {
+    padding: 3px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+#controlForm fieldset {
+    border: none;
+}

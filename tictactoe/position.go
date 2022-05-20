@@ -9,19 +9,6 @@ type Position struct {
 	Column uint16
 }
 
-type PositionDirection uint
-
-const (
-	Top PositionDirection = iota
-	TopRight
-	Right
-	BottomRight
-	Bottom
-	BottomLeft
-	Left
-	TopLeft
-)
-
 func (p Position) String() string {
 	return fmt.Sprintf("Pos[row=%d,col=%d]", p.Row, p.Column)
 }

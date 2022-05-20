@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var game *tictactoe.Game
+var game tictactoe.Game
 
 type playgroundSizeDto struct {
 	Rows    uint16 `json:"rows"`
@@ -51,7 +51,7 @@ func oponentMoveHandler(context *gin.Context) {
 		return
 	}
 
-	status := game.OponentMove(tictactoe.Position{move.Row, move.Column})
+	status := game.OpponentMove(tictactoe.Position{move.Row, move.Column})
 	context.JSON(http.StatusOK, TurnDto{*move, translateStatus(status)})
 }
 
@@ -66,7 +66,7 @@ func translateStatus(status tictactoe.GameStatus) string {
 	case tictactoe.PLAYING:
 		return "PLAYING"
 	default:
-		panic(fmt.Sprint("Unknown status %d", status))
+		panic(fmt.Sprintf("Unknown status %d", status))
 
 	}
 }

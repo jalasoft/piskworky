@@ -20,7 +20,9 @@ func (p PositionSet) Add(pos Position) {
 }
 
 func (p PositionSet) ForEach(cb func(p Position)) {
-
+	for p2 := range p {
+		cb(p2)
+	}
 }
 
 func (p *PositionSet) HasTerminalVector() bool {

@@ -47,7 +47,7 @@ func (n *NextPositionSet) Remove(pos Position) {
 
 func (n *NextPositionSet) AddNeighboursOf(p Position) {
 	for _, neighbour := range p.surroundings() {
-		if !neighbour.isWithinBounds(n.area.Rows, n.area.Columns) {
+		if !neighbour.isWithinBounds(n.area) {
 			continue
 		}
 
